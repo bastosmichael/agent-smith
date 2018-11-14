@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 
 require "agent/smith"
+Agent::Smith::CLI.start(ARGV)
