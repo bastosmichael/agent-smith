@@ -6,7 +6,7 @@ module Agent
   module Smith
     class CLI < Thor
       desc "file_by_name [from_directory, to_directory]", "Move files from one directory to another while creating sub directories based on name"
-      def file_by_name(from_directory=nil, to_directory=nil, directory_name_size=4)
+      def file_by_name(from_directory=nil, to_directory=nil, directory_name_size=2)
         raise 'From Directory not included' unless from_directory
         raise 'To Directory not included' unless to_directory
         FileUtils.mkdir_p to_directory
