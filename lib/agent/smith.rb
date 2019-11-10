@@ -41,7 +41,7 @@ module Agent
               FileUtils.mkdir_p new_directory
 
               array_of_records.uniq.with_progress.each do |record|
-                name = record[:hash] + '.json'
+                name = record[:hash].to_s + '.json'
                 new_file = [new_directory, name].join('/')
                 File.write(new_file, record.to_json)
               end
